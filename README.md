@@ -1,6 +1,4 @@
-[![GitHub issues](https://img.shields.io/github/issues/yocchan1513-team/BitZeny_WP_New_Service.svg)](https://github.com/yocchan1513-team/BitZeny_WP_New_Service/issues)　
-[![GitHub license](https://img.shields.io/github/license/yocchan1513-team/BitZeny_WP_New_Service.svg)](https://github.com/yocchan1513-team/BitZeny_WP_New_Service/blob/master/LICENSE)　[![Twitter](https://img.shields.io/twitter/url/https/github.com/yocchan1513-team/BitZeny_WP_New_Service.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fyocchan1513-team%2FBitZeny_WP_New_Service)
-  
+[![GitHub issues](https://img.shields.io/github/issues/yocchan1513-team/BitZeny-Web-Information.svg?style=plastic)](https://github.com/yocchan1513-team/BitZeny-Web-Information/issues)　[![GitHub forks](https://img.shields.io/github/forks/yocchan1513-team/BitZeny-Web-Information.svg)](https://github.com/yocchan1513-team/BitZeny-Web-Information/network)　[![GitHub license](https://img.shields.io/github/license/yocchan1513-team/BitZeny-Web-Information.svg?style=plastic)](https://github.com/yocchan1513-team/BitZeny-Web-Information/blob/master/LICENSE)　https://img.shields.io/twitter/url/https/github.com/yocchan1513-team/BitZeny-Web-Information.svg?style=social
     
 
 # BitZeny_Yocchan1513_New_Service (仮名)
