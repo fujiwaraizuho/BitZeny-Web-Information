@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>BitZeny Web Information ログイン </title>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  <style>h1{text-align: center;}</style>
+</head>
+<body>
+  <h1>BitZeny Web Information ログイン</h1>
+  <div id="firebaseui-auth-container"></div>
+<!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/3.5.2/firebase-ui-auth__ja.js"></script>
+  <script src="/js/config.js"></script>
+  <script>
+    //----------------------------------------------
+    // Firebase UIの設定
+    //----------------------------------------------
+    var uiConfig = {
+        // ログイン完了時のリダイレクト先
+        signInSuccessUrl: '/Dashboard.html',
+
+        // 利用する認証機能
+        signInOptions: [
+          firebase.auth.TwitterAuthProvider.PROVIDER_ID
+        ],
+
+        // 利用規約のURL(任意で設定)
+        tosUrl: 'https://zny-service.yocchan1513.net/terms/',
+        // プライバシーポリシーのURL(任意で設定)
+        privacyPolicyUrl: 'https://zny-service.yocchan1513.net/privacy-policy/'
+      };
+
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      ui.start('#firebaseui-auth-container', uiConfig);
+  </script>
+</body>
+</html>
