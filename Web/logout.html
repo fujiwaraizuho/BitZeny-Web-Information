@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>BitZeny Web Information ログアウト</title>
+  <style type="text/css">
+    .hide{ display:none; }
+  </style>
+</head>
+<body>
+  <h1>...Please wait</h1>
+  <div id="info"></div>
+  <form>
+    <button type="button" id="logout" class="hide">ログアウト</button>
+  </form>
+
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+  <script>
+var config = {
+    apiKey: "AIzaSyBgoymp8IY2LyLBNnBlUTxsXj9KfY5HyCQ",
+    authDomain: "bitzeny-web-services.firebaseapp.com",
+};
+firebase.initializeApp(config);
+
+    firebase.auth().onAuthStateChanged( (user) => {
+      let logout = document.getElementById("logout");
+
+      //-----------------------------------
+      // ログインチェック
+      //-----------------------------------
+      if(! user) {
+        showMessage('Not Login', 'ログアウトしました');
+        logout.classList.add("hide");
+        location.href = "https://zny-web.yocchan1513.net/" ;
+        return(false);
+      }
+
+      //-----------------------------------
+      // ログイン者への処理
+      //-----------------------------------
+      // ログインメッセージ
+      showMessage('ログアウト確認', `${user.displayName}さん ログアウトしますか?`);
+
+      // ログアウトボタンを表示
+      logout.classList.remove("hide");
+
+      // ログアウトボタンを押下
+      logout.addEventListener("click", ()=>{
+        firebase.auth().signOut().then(()=>{
+          console.log("ログアウトしました");
+        })
+        .catch( (error)=>{
+          console.log(`ログアウト時にエラーが発生しました (${error})`);
+        });
+      });
+    });
+
+    /**
+     * メッセージ表示
+     **/
+    function showMessage(title, msg){
+      document.querySelector('h1').innerText = title;
+      document.querySelector('#info').innerText = msg;
+    }
+  </script>
+</body>
+</html>
