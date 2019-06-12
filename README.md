@@ -25,14 +25,14 @@ PHP 7.2.18
 Uikit
 # 動作確認環境  
 # PC  
-Google Chrome 74.0.3729.169
+Google Chrome 74.0.3729.169  
 Firefox　67.01  
 Edge 最新版  
 # スマートフォン  
 Google Chrome　最新版  
 Safari 最新版  
 ※ 以上の環境で動作確認しました  
-#ライセンス  
+# ライセンス  
 MIT License  
   
 # 作者  
