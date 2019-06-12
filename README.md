@@ -24,10 +24,17 @@ WPの名前を今回のプラグイン名から削除し WordPressではなくWE
 PHP 7.2.18  
 Uikit
 # 動作確認環境  
-準備中...  
-
-#ライセンス
-MIT License
-
-# 作者
-Yocchan1513 Team (Yocchan1513)
+# PC  
+Google Chrome 74.0.3729.169
+Firefox　67.01  
+Edge 最新版  
+# スマートフォン  
+Google Chrome　最新版  
+Safari 最新版  
+※ 以上の環境で動作確認しました  
+#ライセンス  
+MIT License  
+  
+# 作者  
+Yocchan1513 Team (Yocchan1513)  
+  
