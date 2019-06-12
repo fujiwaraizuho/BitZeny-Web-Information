@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>BitZeny Web Information ログイン </title>
+  <title>ログイン | BitZeny Web Information (α)</title>
   <link rel="icon" type="image/png" href="/image/favicon.png">
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
   <style>h1{text-align: center;}</style>
 </head>
 <body>
-  <h1>BitZeny Web Information</h1>
+  <h1>BitZeny Web Information (α)</h1>
   <div id="firebaseui-auth-container"></div>
 <!-- UIkit CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
@@ -21,13 +21,14 @@
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/3.5.2/firebase-ui-auth__ja.js"></script>
   <script src="/js/config.js"></script>
+  
   <script>
     //----------------------------------------------
     // Firebase UIの設定
     //----------------------------------------------
     var uiConfig = {
         // ログイン完了時のリダイレクト先
-        signInSuccessUrl: '/Dashboard.html',
+        signInSuccessUrl: '/Main.html',
         signInFlow: 'popup',
         // 利用する認証機能
         signInOptions: [
@@ -35,7 +36,6 @@
           firebase.auth.GithubAuthProvider.PROVIDER_ID,
           firebase.auth.GoogleAuthProvider.PROVIDER_ID,
           firebase.auth.EmailAuthProvider.PROVIDER_ID,
-          firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
         ],
 
         // 利用規約のURL(任意で設定)
