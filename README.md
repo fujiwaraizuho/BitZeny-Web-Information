@@ -1,9 +1,20 @@
 [![GitHub issues](https://img.shields.io/github/issues/yocchan1513-team/BitZeny-Web-Information.svg?style=plastic)](https://github.com/yocchan1513-team/BitZeny-Web-Information/issues)　[![GitHub forks](https://img.shields.io/github/forks/yocchan1513-team/BitZeny-Web-Information.svg)](https://github.com/yocchan1513-team/BitZeny-Web-Information/network)　[![GitHub license](https://img.shields.io/github/license/yocchan1513-team/BitZeny-Web-Information.svg?style=plastic)](https://github.com/yocchan1513-team/BitZeny-Web-Information/blob/master/LICENSE)
     
 
-# BitZeny_Yocchan1513_New_Service (仮名)
+# BitZeny Web Information
 [BitZeny WP Pay](https://github.com/BitZenyPlus-WP-Pay/BitZeny_WP_Pay)の後を次ぐプラグイン。
 Pay機能は前プラグインより多少機能は劣るが残す
+
+
+
+![BitZeny Web Information αのメインページ画像](https://dl.dropboxusercontent.com/s/gsptns37vtbyfq5/BitZeny%20Web%20Information%20%CE%B1.jpg)
+
+
+
+
+
+
+
   
 #開発方針  
 Pay機能の構築で前プラグインは設計が頓挫してしまい、開発終了したが、今回はPay機能ではなく、仮想通貨などの情報メインで制作していく。  
@@ -11,7 +22,6 @@ WPの名前を今回のプラグイン名から削除し WordPressではなくWE
 [公開予定URL](http://zny-service.yocchan1513.net/)  
 # 開発言語  
 PHP 7.2.18  
-Python  3.7.3
 Uikit
 # 動作確認環境  
 準備中...  
@@ -20,4 +30,4 @@ Uikit
 MIT License
 
 # 作者
-Yocchan1513 Term (Yocchan1513)
+Yocchan1513 Team (Yocchan1513)
