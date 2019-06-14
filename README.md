@@ -27,10 +27,10 @@ Uikit
 # PC  
 Google Chrome 74.0.3729.169  
 Firefox　67.01  
-Edge 最新版  
+Edge  
 # スマートフォン  
 Google Chrome　最新版  
-Safari 最新版  
+Safari 最新版(iPhone6s以上)
 ※ 以上の環境で動作確認しました  
 # ライセンス  
 MIT License  
