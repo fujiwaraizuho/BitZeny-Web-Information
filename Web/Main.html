@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="jp">
 <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <!-- 各種JS,CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
@@ -11,7 +12,11 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
   <script src="/js/config.js"></script>
+  <link rel="stylesheet" media="(min-width: 640px)" href="/css/style_PC.css">
+  <link rel="stylesheet" media="(max-width: 640px)" href="/css/style_Phone.css">
+
 </script>
+
 
 <script>
     firebase.auth().onAuthStateChanged( (user) => {
@@ -30,6 +35,8 @@
     document.querySelector('#info').innerHTML = msg;
 }
 
+
+
 </script>
   <meta charset="utf-8">
   <link rel="icon" type="image/png" href="/image/favicon.png">
@@ -37,36 +44,34 @@
   <title>メインページ | BitZeny Web Information (α)</title>
   <meta name="viewport" content="width=device-width"></head>
 </head>
+
+
+
+
+<div id="nav" uk-offcanvas>
+    <div class="uk-offcanvas-bar">
+            <li class="uk-nav-header">サービス各サイト</li>
+            <li><a href="https://zny-web.yocchan1513.net/status"><span class="uk-margin-small-right" uk-icon="icon: world"></span>稼働状況</a></li>
+            <li><a href="https://insight.yocchan1513.net/"><span class="uk-margin-small-right" uk-icon="icon: world"></span>Insight</a></li>
+            <li class="uk-nav-header">SNS</li>
+            <li><a href="https://twitter.com/Yocchan1513_Fox"><span class="uk-margin-small-right" uk-icon="icon: twitter"></span>開発者Twitter</a></li>
+            <li><a href="https://twitter.com/zny_web_info"><span class="uk-margin-small-right" uk-icon="icon: twitter"></span>Webアプリ 公式Twitter</a></li>
+            <li class="uk-nav-divider"></li>
+            <li><a href="logout.html"><span class="uk-margin-small-right" uk-icon="icon: sign-out"></span>ログアウト</a></li>
+        </ul>
+
+    </div>
+</div>
   <body>
     <header>
         <nav class="uk-navbar-container uk-margin" uk-navbar>
         <div class="uk-navbar-left">
-        <a class="uk-navbar-item uk-logo" href="">BitZeny Web Information (α)</a></div>
+        <a class="uk-navbar-toggle" uk-toggle="target: #nav">
+           <span uk-navbar-toggle-icon></span><span class="uk-margin-small-left"></span>
+           <a class="uk-navbar-item uk-logo" href="">BitZeny Web Information</a></div>
       <div class="uk-navbar-right">
          <ul class="uk-navbar-nav">
           <li>
-            <a href="https://twitter.com/Yocchan1513_Fox">
-            <span class="uk-icon uk-margin-small-right" uk-icon="icon: twitter"></span>
-            開発者アカウント
-          </a>
-          </li>
-    </ul>
-    </div>
-        <div class="uk-navbar-item">
-            <div><a href="https://zny-web.yocchan1513.net/status">稼働状況</a></div>
-        </div>
-            <div class="uk-navbar-item">
-              <div><a href="https://insight.yocchan1513.net/">Insight</a></div>
-        </div>
-            <div class="uk-navbar-item">
-            <a class="uk-button uk-button-primary" href="logout.html">ログアウト</a>
-        </form>
-            </div>
-        
-                <div class="uk-navbar-item">
-                    <h5>ログイン済</h5>
-                    <div id="info">
-                    </div>
             </form>
         </div>
     </div>
@@ -74,24 +79,24 @@
 </header>
       <div class="uk-child-width-1-2@s" uk-grid>
           <div>
-              <div class="uk-card uk-card-default uk-card-body uk-card-body">
-                  <h3 class="fas fa-coins uk-card-title"> Bitzenyの価格 (1時間ごとに更新されます)</h3>
-                  <p><iframe src="/Bitzeny.html" width="400" height="80" frameborder="0" scrolling="no">表示中です....</iframe></p>
+              <div class="uk-card uk-card-large uk-card-default uk-card-body uk-card-body">
+                  <h3 class="fas fa-coins uk-card-title"> Bitzenyの価格</h3>
+                  <p><iframe src="/Bitzeny.html" width="100%" height="80" frameborder="0" style="border:0" allowfullscreen scrolling="no">表示中です....</iframe></p>
                               </div>
           </div>
           <div>
-              <div class="uk-card uk-card-default uk-card-body uk-card-body">
-                  <h3 class="fas fa-hammer uk-card-title"> マイニングプール稼働状況</h3>
-                  <p>準備中...</p>
-                  <p>準備中...</p>
+              <div class="uk-card uk-card-large uk-card-default uk-card-body uk-card-body">
+                  <h3 class="fas fa-hammer uk-card-title">マイニングプール<p>　 稼働状況</p></h3>
                   <p>準備中...</p>
 
                   </div>  
                       </div>
           <div>
-              <div class="uk-card uk-card-default uk-card-body uk-card-body">
-                  <h3 class="fas fa-cubes uk-card-title"> BitZeny insight (insight.yocchan1513.net)</h3>
-                  <p><iframe src="https://insight.yocchan1513.net/" width="800" height="350" frameborder="0" >表示中です....</iframe></p>
+              <div class="uk-card uk-card-large uk-card-default uk-card-body uk-card-body">
+                  <h3 class="fas fa-cubes uk-card-title"> BitZeny insight</h3>
+                  <div class="frem">
+                    <p><iframe src="https://insight.yocchan1513.net/" width="100%" height="350" frameborder="0"  style="border:0" allowfullscreen>表示中です....</iframe></p>
+                  </div>
                </div>  
               </div>
               <div>
@@ -99,11 +104,11 @@
                       <h3 class="fas fa-paperclip uk-card-title"> BitZeny関連リンク</h3></a><br>
                       <a href="https://bitzeny.tech/">BitZeny.tech (BitZeny新公式サイト)</a><br>
                       <a href="https://bitzeny.wiki.fc2.com/">BitZeny Wiki+</a><br>
-                      <a href="https://crypto-bridge.org/">CryptoBridge</a><br>
                       <a href="https://bitzeny.jp/">BitZeny Online Wallet</a><br>
                       <a href="https://twitter.com/zenyma_official">ゼニマ</a><br>
                       <a href="http://www.bitzenyjinjya.com/">BitZeny神社さん</a><br>
                       <a href="https://discord.gg/xmWd3yy">BitZeny Discord</a><br>
+                      <a href="https://crypto-bridge.org/">CryptoBridge</a><br>
 
                    </div>  
                   </div>
