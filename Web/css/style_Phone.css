@@ -1,0 +1,25 @@
+@media screen and (max-widh: 640px) {
+
+img{
+max-width 100%;
+height: auto;
+width /***/:auto;
+}
+.frem {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 200%;
+    position: relative;
+}
+.frem iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 500％;
+        }
+    
+}
+
+
+    
