@@ -7,13 +7,11 @@
   <link rel="icon" type="image/png" href="/image/favicon.png">
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
   <style>h1{text-align: center;}</style>
+  <meta name="robots" content="noindex">
 </head>
 <body>
-  <h1>BitZeny Web Information (α)</h1>
-  <div id="firebaseui-auth-container"></div>
 <!-- UIkit CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
-
 <!-- UIkit JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
@@ -21,6 +19,50 @@
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/3.5.2/firebase-ui-auth__ja.js"></script>
   <script src="/js/config.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-flash.css" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108902554-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108902554-6');
+</script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#237afc"
+    },
+    "button": {
+      "background": "#fff",
+      "text": "#237afc"
+    }
+  },
+  "content": {
+    "message": " プライバシーと Cookie: このサイトは Cookie を使用しています。このサイトの使用を継続することで、その使用に同意したとみなされます。",
+    "dismiss": "同意",
+    "href": "https://zny-service.yocchan1513.net/privacy-policy/"
+  }
+})});
+</script>
+  <header>
+      <nav class="uk-navbar-container uk-margin" uk-navbar>
+      <div class="uk-navbar-left">
+      <a class="uk-navbar-item uk-logo" href="">BitZeny Web Information</a></div>
+  </header>
+
+
+<p><div id="firebaseui-auth-container"></div></p>
+
+
+
+
   
   <script>
     //----------------------------------------------
@@ -47,5 +89,13 @@
       var ui = new firebaseui.auth.AuthUI(firebase.auth());
       ui.start('#firebaseui-auth-container', uiConfig);
   </script>
+<footer>
+    <div class="uk-background-primary uk-light uk-padding uk-panel">
+      <div style="text-align:center">
+      <div id="copyright">Copyright (C) 2019 BitZeny Web Information (Yocchan1513)</div>
+      <p class="uk-text-small">version : alpha1.0 (Ezo red fox)</p>
+      <p class="uk-text-small">BitZeny : ZhKQ3vnJYmKVAB1zdQp4Gy9cuXJc7Hk5yz</p>
+    </div>
+  </footer>
 </body>
 </html>
