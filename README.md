@@ -7,7 +7,7 @@ Pay機能は前プラグインより多少機能は劣るが残す
 
 
 
-![BitZeny Web Information αのメインページ画像](https://dl.dropboxusercontent.com/s/gsptns37vtbyfq5/BitZeny%20Web%20Information%20%CE%B1.jpg)
+![BitZeny Web Information αのメインページ画像](https://dl.dropboxusercontent.com/s/vd6smu270a2i690/bitzeny-web-info.png)
 
 
 
