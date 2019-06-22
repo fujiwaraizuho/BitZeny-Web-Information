@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>BitZeny価格表示部分</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<meta name="robots" content="noindex">
 </head>
 <body>
 <div id="whole">
@@ -20,8 +21,9 @@ window.onload = function(){
 function getJsonp_GAS() {
     $.ajax({
         type: 'GET',
-        url: 'https://script.google.com/macros/s/AKfycbz2Bk5QFT_j1L-VkQZNF39RrnWL6d6EN8hcYu4xLXm3tcs7Dj5u/exec',
+        url: 'https://crypto-price-api.herokuapp.com/price/zny',
         dataType: 'jsonp',
+        xhrFields: withCredentials: true
         jsonpCallback: 'jsondata',
         success: function(json){
             var len = json.length;

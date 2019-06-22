@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width">
   <title>BitZeny Web Information ログアウト</title>
   <link rel="icon" type="image/png" href="/image/favicon.png">
-
+  <meta name="robots" content="noindex">
   <style type="text/css">
     .hide{ display:none; }
   </style>
 </head>
 <body>
-  <h1>...Please wait</h1>
+  
+  <h1>お待ち下さい...</h1>
   <div id="info"></div>
   <form>
     <button type="button" id="logout" class="hide">ログアウト</button>
   </form>
-
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
   <script>
@@ -33,7 +33,7 @@ firebase.initializeApp(config);
       // ログインチェック
       //-----------------------------------
       if(! user) {
-        showMessage('Not Login', 'ログアウトしました');
+        showMessage('No tLogin', 'ログアウトしました');
         logout.classList.add("hide");
         location.href = "https://zny-webinfo.site/" ;
         return(false);
