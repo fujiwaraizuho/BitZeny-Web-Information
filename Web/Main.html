@@ -9,6 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
   <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
@@ -78,20 +79,6 @@ window.cookieconsent.initialise({
   <meta name="viewport" content="width=device-width"></head>
 </head>
 
-<script>
-    $(function() {
-      $.getJSON("https://crypto-price-api.herokuapp.com/price/" , function(data) {
-        var
-          ulObj = $("#demo"),
-          len = data.length;
-    
-        for(var i = 0; i < len; i++) {
-          ulObj.append($("<li>").attr({"id":data[i].price}).text(data[i].updated_at));
-        }
-      });
-    });
-  </script>
-      
         <div id="nav" uk-offcanvas="overlay: true">
           <div class="uk-offcanvas-bar">
       
@@ -104,9 +91,12 @@ window.cookieconsent.initialise({
                         <li><a href="https://zny-service.yocchan1513.net/"><span class="uk-margin-small-right" uk-icon="icon: world"></span>サービスサイト</a></li>
                         <li><a href="https://twitter.com/Yocchan1513_Fox"><span class="uk-margin-small-right" uk-icon="icon: twitter"></span>開発者Twitter</a></li>
                         <li><a href="https://twitter.com/zny_web_info"><span class="uk-margin-small-right" uk-icon="icon: twitter"></span>公式Twitter</a></li>
+
                       </ul>
                   </li>
                   <li class="uk-nav-header">サービス</li>
+                  <li><a href="https://zny-service.yocchan1513.net/category/update_log/"><span class="uk-margin-small-right" uk-icon="icon: code"></span>バージョン履歴</a></li>
+                  <li><a href="https://github.com/yocchan1513-team/BitZeny-Web-Information"><span class="uk-margin-small-right" uk-icon="icon: github-alt"></span>GitHub ソースコード</a></li>
                   <li><a href="https://zny-service.yocchan1513.net/terms/"><span class="uk-margin-small-right" uk-icon="icon: file-text"></span>利用規約</a></li>
                   <li><a href="https://zny-service.yocchan1513.net/privacy-policy/"><span class="uk-margin-small-right" uk-icon="icon: users"></span>プライバシーポリシー</a></li>                  <li class="uk-nav-divider"></li>
                   
@@ -139,13 +129,13 @@ window.cookieconsent.initialise({
               <div class="uk-card uk-card-large uk-card-default uk-card-body uk-card-body">
                   <h3 class="entry-title" class="fas fa-coins uk-card-title"> BitZenyの最新情報 (価格、ニュース)</h3>
                   <p><iframe src="/zny_price/zny.html" width="80%" height="55" frameborder="0"  scrolling="no"  style="border:0" allowfullscreen frameborder="0">>表示中です....</iframe></p>
-                  <p>その他の情報は準備中です...</p>
+                  <p>準備中</p>
                 </div>
           </div>
           <div>
               <div class="uk-card uk-card-large uk-card-default uk-card-body uk-card-body">
                   <h3 class="fas fa-hammer uk-card-title">マイニングプール<p>　 稼働状況</p></h3>
-                  <p>準備中です</p>
+                  <p>準備中</p>
 
                   </div>  
                       </div>
@@ -158,26 +148,38 @@ window.cookieconsent.initialise({
                </div>  
               </div>
               <div>
-                  <div class="uk-card uk-card-default uk-card-body uk-card-body">
-                      <h3class="fas fa-paperclip uk-card-title"> BitZeny関連リンク</h3></a><br>
-                      <a href="https://bitzeny.tech/">BitZeny.tech (BitZeny新公式サイト)</a><br>
-                      <a href="https://bitzeny.wiki.fc2.com/">BitZeny Wiki+</a><br>
-                      <a href="https://bitzeny.jp/">BitZeny Online Wallet</a><br>
-                      <a href="https://twitter.com/zenyma_official">ゼニマ</a><br>
-                      <a href="http://www.bitzenyjinjya.com/">BitZeny神社さん</a><br>
-                      <a href="https://discord.gg/xmWd3yy">BitZeny Discord</a><br>
-                      <a href="https://crypto-bridge.org/">CryptoBridge</a><br>
 
-                   </div>  
-                  </div>
-                  
+
+                  <div class="uk-card uk-card-default uk-card-body uk-card-body">
+                      <h3 class="fas fa-paperclip uk-card-title" > BitZeny関連リンク</h3></a>
+                      <a><h5>---- BitZenyの情報収集 ウオレット ----</h5></a>
+                      <a href="https://bitzeny.tech/">BitZeny.tech (BitZeny新公式サイト)</a><br>
+                      <a href="https://bitzeny.wiki.fc2.com/">BitZeny Wiki+</a>
+                      <a><h5>---- サービス ----</h5> </a>
+                      <a href="https://twitter.com/zenyma_official">ゼニマ</a><br>
+                      <a> <h5>---- ブログ、ホームページ ----</h5> </a>
+                      <a href="https://kuronuko.vip/">ぬこ@ZENY<br>
+                      <a href="https://zeny.bex.jp/">助太刀ゼニー<br>
+                      <a> <h5>---- マイニングプール----</h5> </a>
+                      <a href="http://zny.daddy-pool.work/">Daddy-Pool Bitzeny(ZNY)<br>
+                      <a href="https://zny.mofumofu.me/">mofumofu.me<br>
+                      <a href="https://bitzeny.mizutamari.work/index.php">みずたまり<br>
+                      <a href="https://ukkey3.space/bitzeny/index.php">大人の自由研究 <br>
+                      <a href="https://mining.zinntikumugai.xyz/">macyan.net<br>
+                      <a href="https://bunnymining.work/bitzeny/">うさぎコイン発掘所 BitZeny版<br>
+                      <a href="http://macyan.net:8080/">マイニングのやり方<br>
+                      <a><h5>---- その他 ----</h5> </a>
+                      <a href="http://www.bitzenyjinjya.com/">BitZeny神社さん</a><br>
+                      <a href="https://crypto-bridge.org/">CryptoBridge</a><br>
+                </div>
+                </div>  
       </div>
 <p></p>
 <footer>
     <div class="uk-background-primary uk-light uk-padding uk-panel">
       <div style="text-align:center">
       <div id="copyright">Copyright (C) 2019 BitZeny Web Information (Yocchan1513)</div>
-      <p class="uk-text-small">version : alpha1.1 (Arctic fox)</p>
+      <p class="uk-text-small">version : alpha1.2 (Arctic fox)</p>
       <p class="uk-text-small">BitZeny : ZhKQ3vnJYmKVAB1zdQp4Gy9cuXJc7Hk5yz</p>
     </div>
   </footer>
