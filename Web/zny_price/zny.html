@@ -9,7 +9,9 @@
         <div id="app">
             <div class="itemContainer">
                 <div v-for="result in results" class="item">
-                    <div>ZNY価格平均: {{ result.price }} 円</div>
+                    <div>ZNY価格平均</div>
+                    <div>円建て: {{ result.price.jpy }} 円</div>
+                    <div>ドル建て: ${{ result.price.usd }}</div>
                     <div>更新時間: {{ result.updated_at }}です。</div>
                 </div>
             </div>
